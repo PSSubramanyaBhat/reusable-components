@@ -7,12 +7,13 @@
 }
 .DropdownSelected{
     border: 2px solid #ccc;
-    height: 30px;
+    height: 25px;
     width: 299px;
     background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 10px 10px 15px #444;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .DropDownContainer {
@@ -25,6 +26,8 @@
     display: flex;
     flex-direction: column;
     box-shadow: 10px 10px 15px #444;
+    /* transition: height 0.3s ease-in-out; */
+    /* -webkit-font-smoothing: antialiased; */
 }
 
 .MonthList {
@@ -35,11 +38,8 @@
     outline: none;
     border-bottom: 1px solid #ccc;
     margin-left: 30px;
-}
-
-.MonthNamesDisplay {
-    background-color: #fff;
-    border: 2px solid #ccc;
-    height: 30px;
-    width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* transition: 1s ease-in forwards; */
+    /* transition: height 0.3s ease-in-out; */
+    /* -webkit-font-smoothing: antialiased; */
 }

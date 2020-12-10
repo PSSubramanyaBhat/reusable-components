@@ -1,10 +1,12 @@
 .Arrow {
     padding: 2px;
-    border-top: 1px solid red;
-    border-right: 1px solid red;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
     width: 5px;
     height: 5px;
     margin-top: 15px;
     margin-left: 20px;
-    transform: rotate(-225deg);
+    transform: rotate(45deg);
 }
+
+

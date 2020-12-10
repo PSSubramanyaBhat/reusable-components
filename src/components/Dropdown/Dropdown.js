@@ -54,23 +54,43 @@ const months = [
 
 ];
 
-const Dropdown = (props) => {
-    const [selectedMonth, setSelectedMonth] = useState('Januray');
+const Dropdown = ({ dropDownStatus }) => {
+    const [selectedMonth, setSelectedMonth] = useState('Select a month');
+    // const [dropDown, setDropDown] = useState(dropDownStatus);
+
+    let dropDown = false;
+
+    useEffect(() => {
+        
+    });
+
     return (
 
         <div className={styles.Dropdown}>
 
 
             <div className={styles.DropdownSelected}>
-                {months[0].name}
+                {/* {months[0].name} */}
+                {selectedMonth}
             </div>
-            <div className={styles.DropDownContainer}>
-                {months.map((monthName, id) => {
-                    return (
-                        <button className={styles.MonthList} key={id}>{monthName.name} </button>
-                    );
-                })}
-            </div>
+            {/* {dropDownStatus */}
+            {dropDownStatus
+                ? <div className={styles.DropDownContainer}>
+                    {months.map((monthName, id) => {
+                        return (
+                            <button
+                                className={styles.MonthList}
+                                key={id}
+                                onClick={() => {
+                                    setSelectedMonth(monthName.name);
+                                    // setDropDown(!dropDown);
+                                }}
+                            >
+                                {monthName.name} </button>
+                        );
+                    })}
+                </div>
+                : ''}
         </div>
     );
 };
