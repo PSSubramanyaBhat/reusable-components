@@ -1,25 +1,17 @@
 import './App.css';
-
-import React from 'react';
+import Arrow from './components/Arrow/Arrow';
+import Dropdown from './components/Dropdown/Dropdown';
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 
+
+
 function App() {
+  const [dropDownStatus,setDropDownStatus] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dropdown></Dropdown>
+      <Arrow dropDownStatus={dropDownStatus}></Arrow>
     </div>
   );
 }

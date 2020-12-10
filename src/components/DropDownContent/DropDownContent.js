@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // import PropTypes from 'prop-types';
-import styles from './Dropdown.module.css';
+import styles from './DropDownContent.module.css';
 
 const months = [
     {
@@ -54,30 +54,17 @@ const months = [
 
 ];
 
-const Dropdown = (props) => {
-    const [selectedMonth, setSelectedMonth] = useState('Januray');
+
+const DropDownContent = props => {
     return (
-
-        <div className={styles.Dropdown}>
-
-
-            <div className={styles.DropdownSelected}>
-                {months[0].name}
-            </div>
-            <div className={styles.DropDownContainer}>
-                {months.map((monthName, id) => {
-                    return (
-                        <button className={styles.MonthList} key={id}>{monthName.name} </button>
-                    );
-                })}
-            </div>
+        <div className={styles.DropDownContent}>
         </div>
     );
 };
 
 
-Dropdown.propTypes = {
+DropDownContent.propTypes = {
 
 };
 
-export default Dropdown;
+export default DropDownContent;

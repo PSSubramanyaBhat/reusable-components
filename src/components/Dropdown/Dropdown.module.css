@@ -1,3 +1,45 @@
 .Dropdown {
+    background-color: #fff;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.DropdownSelected{
+    border: 2px solid #ccc;
+    height: 30px;
+    width: 299px;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 10px 10px 15px #444;
+}
 
+.DropDownContainer {
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #ccc;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 15px #444;
+}
+
+.MonthList {
+    height: 40px;
+    width: 240px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    margin-left: 30px;
+}
+
+.MonthNamesDisplay {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    height: 30px;
+    width: 300px;
 }
