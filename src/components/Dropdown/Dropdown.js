@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
+import cn from "classnames";
 import styles from './Dropdown.module.css';
 
 const months = [
@@ -56,13 +57,12 @@ const months = [
 
 const Dropdown = ({ dropDownStatus }) => {
     const [selectedMonth, setSelectedMonth] = useState('Select a month');
-    // const [dropDown, setDropDown] = useState(dropDownStatus);
+    const [dropDown, setDropDown] = useState(dropDownStatus);
 
-    let dropDown = false;
-
-    useEffect(() => {
-        
-    });
+    // useEffect(() => {
+    //     setDropDown(!dropDown);
+    //     // console.log("YUVRAJ SINGH...", dropDown);
+    // },[]);
 
     return (
 
@@ -73,9 +73,14 @@ const Dropdown = ({ dropDownStatus }) => {
                 {/* {months[0].name} */}
                 {selectedMonth}
             </div>
-            {/* {dropDownStatus */}
             {dropDownStatus
-                ? <div className={styles.DropDownContainer}>
+            /* {dropDown */  //try this later...
+                ? <div
+                    className={styles.DropDownContainer}
+                // className={cn(styles.DropDownContainerOff, {
+                //     [styles.DropDownContainer]: dropDownStatus,
+                // })}
+                >
                     {months.map((monthName, id) => {
                         return (
                             <button
@@ -83,7 +88,7 @@ const Dropdown = ({ dropDownStatus }) => {
                                 key={id}
                                 onClick={() => {
                                     setSelectedMonth(monthName.name);
-                                    // setDropDown(!dropDown);
+                                    // setDropDown(false);
                                 }}
                             >
                                 {monthName.name} </button>

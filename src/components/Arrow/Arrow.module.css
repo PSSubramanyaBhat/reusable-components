@@ -1,12 +1,51 @@
-.Arrow {
+.ArrowRight {
     padding: 2px;
     border-top: 2px solid red;
     border-right: 2px solid red;
     width: 5px;
     height: 5px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 20px;
+    /* transform: rotate(45deg); */
     transform: rotate(45deg);
+    transition: all 0.6s;
+
+}
+
+.ArrowBottom {
+    padding: 2px;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: rotate(135deg);
+    transition: all 0.6s;
+}
+
+.ArrowLeft {
+    padding: 2px;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: rotate(225deg);
+    transition: all 0.6s;
+}
+
+.ArrowTop {
+    padding: 2px;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: rotate(315deg);
+    transition: all 0.6s;
 }
 
 

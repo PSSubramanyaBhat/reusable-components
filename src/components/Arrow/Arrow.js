@@ -3,10 +3,29 @@ import React from 'react';
 import cn from "classnames";
 import styles from './Arrow.module.css';
 
-const Arrow = ({ dropDownOpen }) => {
+// export enum Direction {
+//     Idle = "idle",
+//     Loading = "loading",
+//     Resolved = "resolved",
+//     Error = "error",
+//   }
+
+const Arrow = ({ dropDownOpen, dropDownStatus, direction }) => {
     return (
         <div
-            className={styles.Arrow}
+            // className={styles.ArrowRight}
+
+            // className={cn(styles.ArrowRight, {
+            //     [styles.ArrowBottom]: dropDownStatus,
+            // })}   /** PERFECTLY WORKING CODE */
+
+            className={cn(styles.ArrowRight, {
+                [styles.ArrowBottom]: direction === 'Down',
+                [styles.ArrowLeft]: direction === 'Left',
+                [styles.ArrowTop]: direction === 'Up',
+            })}
+
+
             onClick={() => {
                 dropDownOpen();
             }}
