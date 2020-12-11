@@ -1,51 +1,86 @@
+:root {
+    --arrow-color: red;
+    --animation-speed: 0.6s;
+    --right-arrow-degree: 45deg;
+    --bottom-arrow-degree: 135deg;
+    --left-arrow-degree: 225deg;
+    --top-arrow-degree: 315deg;
+}
+
 .ArrowRight {
     padding: 2px;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid var(--arrow-color);
+    border-right: 2px solid var(--arrow-color);
     width: 5px;
     height: 5px;
     margin-top: 20px;
     margin-left: 20px;
-    /* transform: rotate(45deg); */
-    transform: rotate(45deg);
+    transform: rotate(var(--right-arrow-degree));
     transition: all 0.6s;
-
 }
 
 .ArrowBottom {
     padding: 2px;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid var(--arrow-color);
+    border-right: 2px solid var(--arrow-color);
     width: 5px;
     height: 5px;
     margin-top: 20px;
     margin-left: 20px;
-    transform: rotate(135deg);
+    transform: rotate(var(--bottom-arrow-degree));
     transition: all 0.6s;
 }
 
 .ArrowLeft {
     padding: 2px;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid var(--arrow-color);
+    border-right: 2px solid var(--arrow-color);
     width: 5px;
     height: 5px;
     margin-top: 20px;
     margin-left: 20px;
-    transform: rotate(225deg);
+    transform: rotate(var(--left-arrow-degree));
     transition: all 0.6s;
 }
 
 .ArrowTop {
     padding: 2px;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid var(--arrow-color);
+    border-right: 2px solid var(--arrow-color);
     width: 5px;
     height: 5px;
     margin-top: 20px;
     margin-left: 20px;
-    transform: rotate(315deg);
+    transform: rotate(var(--top-arrow-degree));
     transition: all 0.6s;
 }
+
+
+/* .Arrow {
+    padding: 2px;
+    border-top: 2px solid var(--arrow-color);
+    border-right: 2px solid var(--arrow-color);
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: all 0.6s;
+} */
+
+/* .rightSide {
+    transform: rotate(var(--right-arrow-degree));
+}
+
+.downSide {
+    transform: rotate(var(--bottom-arrow-degree));
+}
+
+.leftSide {
+    transform: rotate(var(--left-arrow-degree));
+}
+
+.upSide {
+    transform: rotate(var(--top-arrow-degree));
+} */
 
 

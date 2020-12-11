@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <Dropdown dropDownStatus={dropDownStatus}></Dropdown>
+      <Dropdown dropDownOpen={dropDownOpen} dropDownStatus={dropDownStatus}></Dropdown>
       <Arrow dropDownOpen={dropDownOpen} dropDownStatus={dropDownStatus} direction={direction}></Arrow>
     </div>
   );

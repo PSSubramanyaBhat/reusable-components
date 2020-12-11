@@ -10,20 +10,29 @@ import styles from './Arrow.module.css';
 //     Error = "error",
 //   }
 
+
+
 const Arrow = ({ dropDownOpen, dropDownStatus, direction }) => {
+    /*let dir = null;
+    if (direction === 'Right') {
+        dir = 'styles.rightSide';
+    } else if (direction === 'Down') {
+        dir = 'styles.downSide';
+    } else if (direction === 'Left') {
+        dir = 'styles.leftSide';
+    } else if (direction === 'Up') {
+        dir = 'styles.upSide';
+    }*/  //TRY FIXING THIS LOGIC LATER...
+
     return (
         <div
-            // className={styles.ArrowRight}
-
-            // className={cn(styles.ArrowRight, {
-            //     [styles.ArrowBottom]: dropDownStatus,
-            // })}   /** PERFECTLY WORKING CODE */
-
             className={cn(styles.ArrowRight, {
                 [styles.ArrowBottom]: direction === 'Down',
                 [styles.ArrowLeft]: direction === 'Left',
                 [styles.ArrowTop]: direction === 'Up',
-            })}
+            })}  //METHOD 1... PERFECTLY WORKING CODE...
+
+            // className={`${styles.Arrow} ${dir}`}//TRY FIXING THIS LOGIC LATER...
 
 
             onClick={() => {

@@ -55,22 +55,19 @@ const months = [
 
 ];
 
-const Dropdown = ({ dropDownStatus }) => {
+const Dropdown = ({ dropDownStatus, dropDownOpen }) => {
     const [selectedMonth, setSelectedMonth] = useState('Select a month');
     const [dropDown, setDropDown] = useState(dropDownStatus);
 
     // useEffect(() => {
-    //     setDropDown(!dropDown);
-    //     // console.log("YUVRAJ SINGH...", dropDown);
-    // },[]);
+    //     // setDropDown(!dropDown);
+    //     console.log("YUVRAJ SINGH...", dropDown);
+    // },[dropDown]);
 
     return (
 
         <div className={styles.Dropdown}>
-
-
             <div className={styles.DropdownSelected}>
-                {/* {months[0].name} */}
                 {selectedMonth}
             </div>
             {dropDownStatus
@@ -88,7 +85,9 @@ const Dropdown = ({ dropDownStatus }) => {
                                 key={id}
                                 onClick={() => {
                                     setSelectedMonth(monthName.name);
+                                    dropDownOpen();
                                     // setDropDown(false);
+                                    // setDropDown(!dropDown);
                                 }}
                             >
                                 {monthName.name} </button>
